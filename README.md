@@ -1,3 +1,2 @@
 # inventory
-This is a comment to show I can push changes
-I am adding a comment for only the dev branch
+Add description of what we are doing
