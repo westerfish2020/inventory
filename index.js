@@ -1,7 +1,11 @@
+require('dotenv').config(); // load environment variables from .env file
 const express = require('express')
 const app = express()
 var router = express.Router();
-const port = 3000
+
+const port = process.env.PORT || 3000; // default port is 3000
+
+// const port = 3000
 
 var path = __dirname + '/src/views/';
 console.log("this is the path:  " + path)
@@ -29,6 +33,6 @@ app.use('*',function(req, res){
   res.send('Error 404: Not Found!');
 });
   
-app.listen(3000,function(){
-  console.log('Server running at Port 3000');
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
