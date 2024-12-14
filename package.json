@@ -1,10 +1,13 @@
 {
   "name": "ajvaluables",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "/Users/carolinewester/development/ajmac/inventory/src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+  "start": "ts-node src/index.ts",
+  "build": "tsc",
+  "serve": "node dist/index.js",
+  "postbuild": "chmod +x bin/postbuild.sh && ./bin/postbuild.sh"
+
   },
   "author": "",
   "license": "ISC",
@@ -17,10 +20,13 @@
   "devDependencies": {
     "@aws-amplify/backend": "^1.9.0",
     "@aws-amplify/backend-cli": "^1.4.3",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
     "aws-cdk": "^2.173.0",
     "aws-cdk-lib": "^2.173.0",
     "constructs": "^10.4.2",
     "esbuild": "^0.24.0",
+    "ts-node": "^10.9.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   }
