@@ -1,4 +1,4 @@
-// src/index.ts
+// index.ts
 import express from 'express';
 
 const app: express.Application = express();
@@ -6,8 +6,10 @@ const port = 3000;
 
 // app.use(express.text());
 
-var path = __dirname + '/views/';
-var pubpath = '/Users/carolinewester/development/ajmac/inventory/public'
+var path = __dirname + '/src/views/';
+// var pubpath = '/Users/carolinewester/development/ajmac/inventory/public'
+var pubpath = __dirname + '/public/'
+
 app.use(express.static(pubpath));
 
 console.log("this is the path:  " + path)
@@ -16,7 +18,6 @@ console.log("this is the directory:  " + __dirname)
 
 app.listen(port, () => {
   console.log(`server is listening on ${port}`);
-  console.log("hi Abby")
 });
 
 // Homepage
