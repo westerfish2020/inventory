@@ -4,7 +4,15 @@ import express from 'express';
 const app: express.Application = express();
 const port = 3000;
 
-app.use(express.text());
+// app.use(express.text());
+
+var path = __dirname + '/views/';
+var pubpath = '/Users/carolinewester/development/ajmac/inventory/public'
+app.use(express.static(pubpath));
+
+console.log("this is the path:  " + path)
+console.log("public directory: "  + pubpath)
+console.log("this is the directory:  " + __dirname)
 
 app.listen(port, () => {
   console.log(`server is listening on ${port}`);
@@ -12,7 +20,7 @@ app.listen(port, () => {
 
 // Homepage
 app.get('/', (req: express.Request, res: express.Response) => {
-  res.status(200).send("Hello World!");
+    res.sendFile(path + 'index.html');
 });
 
 // GET
