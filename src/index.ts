@@ -16,6 +16,7 @@ console.log("this is the directory:  " + __dirname)
 
 app.listen(port, () => {
   console.log(`server is listening on ${port}`);
+  console.log("hi Abby")
 });
 
 // Homepage
