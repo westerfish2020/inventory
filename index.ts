@@ -22,7 +22,7 @@ app.listen(port, () => {
 
 // Homepage
 app.get('/', (req: express.Request, res: express.Response) => {
-    res.sendFile(path + 'index.html');
+    res.sendFile(path + 'index1.html');
 });
 
 // GET
