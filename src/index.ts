@@ -1,20 +1,11 @@
-// index.ts
+// src/index.ts
 import express from 'express';
 
 const app: express.Application = express();
 const port = 3000;
 
-// app.use(express.text());
-
-var path = __dirname + '/src/views/';
-// var pubpath = '/Users/carolinewester/development/ajmac/inventory/public'
-var pubpath = __dirname + '/public/'
-
-app.use(express.static(pubpath));
-
-console.log("this is the path:  " + path)
-console.log("public directory: "  + pubpath)
-console.log("this is the directory:  " + __dirname)
+// use this code to try and get base case working
+app.use(express.text());
 
 app.listen(port, () => {
   console.log(`server is listening on ${port}`);
@@ -22,8 +13,29 @@ app.listen(port, () => {
 
 // Homepage
 app.get('/', (req: express.Request, res: express.Response) => {
-    res.sendFile(path + 'index1.html');
+  res.status(200).send("Hello World!");
 });
+
+// app.use(express.text());
+
+// var path = __dirname + '/src/views/';
+// // var pubpath = '/Users/carolinewester/development/ajmac/inventory/public'
+// var pubpath = __dirname + '/public/'
+
+// app.use(express.static(pubpath));
+
+// console.log("this is the path:  " + path)
+// console.log("public directory: "  + pubpath)
+// console.log("this is the directory:  " + __dirname)
+
+// app.listen(port, () => {
+//   console.log(`server is listening on ${port}`);
+// });
+
+// // Homepage
+// app.get('/', (req: express.Request, res: express.Response) => {
+//     res.sendFile(path + 'index1.html');
+// });
 
 // GET
 app.get('/get', (req: express.Request, res: express.Response) => {

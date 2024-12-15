@@ -1,12 +1,12 @@
 {
   "name": "ajvaluables",
   "version": "1.0.0",
-  "main": "/Users/carolinewester/development/ajmac/inventory/index.ts",
+  "main": "/Users/carolinewester/development/ajmac/inventory/src/index.ts",
   "scripts": {
-  "start": "ts-node index.ts",
-  "build": "tsc",
-  "serve": "node dist/index.js",
-  "postbuild": "chmod +x bin/postbuild.sh && ./bin/postbuild.sh"
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "serve": "node dist/index.js",
+    "postbuild": "chmod +x bin/postbuild.sh && ./bin/postbuild.sh"
 
   },
   "author": "",
