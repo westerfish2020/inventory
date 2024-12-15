@@ -7,7 +7,6 @@
     "build": "tsc",
     "serve": "node dist/index.js",
     "postbuild": "chmod +x bin/postbuild.sh && ./bin/postbuild.sh"
-
   },
   "author": "",
   "license": "ISC",
